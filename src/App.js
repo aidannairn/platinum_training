@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 //Files
 import './App.css'
 import Header from './Components/Header/Header'
-import PersonalTraining from './Components/About/About'
+import About from './Components/About/About'
 import Resources from './Components/Resources/Resources'
 import Dashboard from './Components/Dashboard/Dashboard'
 import Profile from './Components/Profile/Profile'
@@ -18,11 +18,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Dashboard} />
           <Route path="/profile" component={Profile} />
-          <Route
-            exact
-            path="/profile/personal-training"
-            component={PersonalTraining}
-          />
+          <Route exact path="/profile/about" component={About} />
           <Route exact path="/profile/resources" component={Resources} />
           <Route exact path="/profile/services" component={Services} />
         </Switch>

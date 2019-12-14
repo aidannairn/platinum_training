@@ -1,6 +1,10 @@
-import React, { Fragment } from 'react'
-import { Grid, Menu, Segment } from 'semantic-ui-react'
-import { Link, useLocation } from 'react-router-dom'
+import React, { Fragment, useState } from 'react'
+import { Grid, Header, Icon, Menu, Segment } from 'semantic-ui-react'
+import { Link, Switch, Route, useLocation } from 'react-router-dom'
+//Files
+import About from '../About/About'
+import Resources from '../Resources/Resources'
+import Services from '../Services/Services'
 
 function Profile() {
   const ActiveItem = route => {
@@ -9,7 +13,10 @@ function Profile() {
 
   return (
     <Fragment>
-      <h1>Profile</h1>
+      <Header as="h2" icon textAlign="center">
+        <Icon name="users" circular />
+        <Header.Content>Profile</Header.Content>
+      </Header>
       <Grid>
         <Grid.Column width={2}>
           <Menu fluid vertical tabular>
@@ -33,8 +40,17 @@ function Profile() {
 
         <Grid.Column stretched width={12}>
           <Segment>
-            This is an stretched grid column. This segment will always match the
-            tab height
+            <Switch>
+              <Route exact path="/profile/about">
+                <About />
+              </Route>
+              <Route exact path="/profile/resources">
+                <Resources />
+              </Route>
+              <Route exact path="/profile/services">
+                <Services />
+              </Route>
+            </Switch>
           </Segment>
         </Grid.Column>
       </Grid>

@@ -13,8 +13,8 @@ const Header = () => {
         <Link to="/">
           <Menu.Item active={ActiveItem('/')}>Home</Menu.Item>
         </Link>
-        <Link to="/profile/about">
-          <Menu.Item active={ActiveItem('/profile/about')}>Profile</Menu.Item>
+        <Link to="/profile">
+          <Menu.Item active={ActiveItem('/profile')}>Profile</Menu.Item>
         </Link>
       </Container>
     </Menu>
