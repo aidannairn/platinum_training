@@ -1,10 +1,10 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment } from 'react'
 import { Grid, Header, Icon, Menu, Segment } from 'semantic-ui-react'
 import { Link, Switch, Route, useLocation } from 'react-router-dom'
 //Files
-import About from '../About/About'
-import Resources from '../Resources/Resources'
-import Services from '../Services/Services'
+import About from 'Components/About/About'
+import Resources from 'Components/Resources/Resources'
+import Services from 'Components/Services/Services'
 
 function Profile() {
   const ActiveItem = route => {

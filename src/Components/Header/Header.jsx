@@ -1,5 +1,5 @@
 import React from 'react'
-import { Menu, Container, Image, Icon } from 'semantic-ui-react'
+import { Menu, Container } from 'semantic-ui-react'
 import { Link, useLocation } from 'react-router-dom'
 
 const Header = () => {
@@ -13,9 +13,22 @@ const Header = () => {
         <Link to="/">
           <Menu.Item active={ActiveItem('/')}>Home</Menu.Item>
         </Link>
-        <Link to="/profile">
-          <Menu.Item active={ActiveItem('/profile')}>Profile</Menu.Item>
+        <Link to="/profile/about">
+          <Menu.Item active={ActiveItem('/profile/about')}>Profile</Menu.Item>
         </Link>
+        <Link to="/signup">
+          <Menu.Item active={ActiveItem('/signup')}>Signup</Menu.Item>
+        </Link>
+        <Link to="/login">
+          <Menu.Item active={ActiveItem('/login')}>Login</Menu.Item>
+        </Link>
+        <Menu.Item
+          onClick={() => {
+            console.log('Logout clicked.')
+          }}
+        >
+          Logout
+        </Menu.Item>
       </Container>
     </Menu>
   )
